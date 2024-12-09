@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+body {
+    font-family: Chewy, sans-serif;
+    text-align: center;
+    background-color: #00a2ff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.buns-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.bun {
+    width: 15%; /* Use percentage for responsiveness */
+    max-width: 100px; /* Prevent buns from getting too large */
+    min-width: 60px; /* Prevent buns from getting too small */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.bun:hover {
+    transform: scale(1.1);
+}
+
+.penny-container {
+    margin: 20px 0;
+}
+
+#penny {
+    width: 80px; /* Default size */
+    max-width: 20%; /* Adjust size for larger screens */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#penny:hover {
+    transform: scale(1.2);
+}
+
+audio {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bun {
+        width: 20%; /* Slightly larger for medium screens */
+        max-width: 80px;
+    }
+
+    #penny {
+        width: 60px; /* Smaller penny size */
+    }
+}
+
+@media (max-width: 480px) {
+    .bun {
+        width: 25%; /* Larger proportion on small screens */
+        max-width: 70px;
+    }
+
+    #penny {
+        width: 50px; /* Even smaller penny size */
+    }
+}
